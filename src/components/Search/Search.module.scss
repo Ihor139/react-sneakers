@@ -1,0 +1,30 @@
+@import "../../scss/modules/helper";
+
+.search {
+  position: relative;
+  @include flexAlignCenter;
+  gap: 15px;
+  border: $border;
+  border-radius: 8px;
+  padding: 8px;
+  margin-left: auto;
+}
+.btn {
+  cursor: pointer;
+  position: absolute;
+  padding: 8px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  svg {
+    transform: rotate(45deg);
+  }
+}
+
+.ico {
+}
+
+.input {
+  min-width: 150px;
+  padding-right: 15px;
+}

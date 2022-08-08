@@ -1,0 +1,54 @@
+@import "../../scss/modules/helper";
+
+.footer {
+  @include flexBetween;
+  padding: 45px;
+  @include for-680 {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+}
+
+.logo {
+  img {
+    @include widthHeight(40px);
+    float: left;
+    margin-right: 16px;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+  }
+  span {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $black;
+    &:last-child {
+      text-transform: none;
+      color: $grey;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+.contact {
+  &__row {
+    display: flex;
+    gap: 15px;
+  }
+  span {
+    color: $grey;
+  }
+  a {
+    color: $grey-dark;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

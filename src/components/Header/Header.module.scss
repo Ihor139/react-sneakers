@@ -1,0 +1,84 @@
+@import "../../scss/modules/helper";
+
+.header {
+  @include flexBetween;
+  border-bottom: $border;
+  padding: 45px;
+  @include for-680 {
+    padding: 20px;
+  }
+  @include for-550 {
+    gap: 20px;
+  }
+}
+
+.logo {
+  img {
+    @include widthHeight(40px);
+    float: left;
+    margin-right: 16px;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+  }
+  span {
+    white-space: nowrap;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $black;
+    &:last-child {
+      text-transform: none;
+      color: $grey;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+.header .logo {
+  p {
+    @include for-550 {
+      display: none;
+    }
+  }
+}
+
+.action {
+  @include flexAlignCenter;
+}
+
+.list {
+  @include flexAlignCenter;
+  gap: 30px;
+  @include for-420 {
+    gap: 15px;
+  }
+}
+
+.case {
+  @include flexAlignCenter;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.ico {
+  @include flexAlignCenter;
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.txt {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: $grey-dark;
+}

@@ -1,0 +1,117 @@
+@import "../../scss/modules/helper";
+
+.case {
+  padding: 20px;
+  width: 25%;
+  @include for-992 {
+    width: 33.3333%;
+  }
+  @include for-680 {
+    padding: 10px;
+    width: 50%;
+  }
+  @include for-420 {
+    width: 100%;
+  }
+}
+.product {
+}
+
+.inner {
+  position: relative;
+  padding: 20px 30px;
+  border: $border;
+  border-radius: $borderRadius;
+  transition: 0.2s;
+  &:hover {
+    cursor: pointer;
+    box-shadow: $boxShadow;
+  }
+  @include for-992 {
+    padding: 20px;
+  }
+}
+.favorite {
+  @include flexCenter;
+  position: absolute;
+  z-index: 5;
+  top: 20px;
+  left: 30px;
+  @include widthHeight(32px);
+  border-radius: 8px;
+  border: $border;
+  cursor: pointer;
+  transition: 0.2s;
+  &--red {
+    background: #fef0f0;
+    border-radius: 7px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.img {
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    padding-top: 85%;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include objectFitCover;
+  }
+}
+.title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: $black;
+  margin-bottom: 14px;
+}
+.bottom {
+  @include flexBetweenCenter;
+}
+.price {
+  p {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: $grey;
+  }
+  b {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: $black;
+  }
+}
+.btn {
+  @include flexCenter;
+  @include widthHeight(32px);
+  border-radius: 8px;
+  border: $border;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.btn__green {
+  @include flexCenter;
+  @include widthHeight(32px);
+  border-radius: 8px;
+  border: $border;
+  cursor: pointer;
+  transition: 0.2s;
+  background: linear-gradient(180deg, #89f09c 0%, #3cc755 100%);
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.btn-ico {
+}

@@ -1,0 +1,85 @@
+@import "../../scss/modules/helper";
+
+.info {
+  @include flexBetweenCenter;
+  flex-direction: column;
+  height: 100%;
+  gap: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  img {
+    margin-top: auto;
+  }
+}
+.title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  color: #000000;
+  &.green {
+    color: #87c20a;
+  }
+}
+.description {
+  margin-bottom: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  opacity: 0.4;
+}
+.actions {
+  width: 100%;
+}
+
+.btnBack {
+  width: 100%;
+  margin-top: auto;
+  cursor: pointer;
+  position: relative;
+  @include flexBetweenCenter;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: $green-light;
+  transition: 0.2s;
+  &:hover {
+    background-color: lighten($color: $green-light, $amount: 5%);
+  }
+  &:hover &__ico {
+    transform: translateX(5px);
+  }
+  &:active {
+    background-color: darken($color: $green-light, $amount: 10%);
+  }
+  &:disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: rgb(107, 107, 107);
+    animation:  opacity infinite 1s ease-out;
+  }
+}
+
+.txt {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 24px;
+  color: $white;
+  white-space: nowrap;
+}
+.ico {
+  position: absolute;
+  transform: rotate(180deg);
+  right: unset;
+  left: 30px;
+  top: 15px;
+  transition: 0.2s;
+}
+
+@keyframes opacity {
+  0%    { opacity: 1; }
+  50%   { opacity: 0.7; }
+  100%  { opacity: 1; }
+}
